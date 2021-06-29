@@ -17,75 +17,19 @@
       href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="style.css" />
     <title>Face Recognition</title>
-    <style>
-      .background {
-        position: absolute;
-
-        display: block;
-
-        top: 0;
-
-        left: 0;
-
-        z-index: 0;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-family: "Poppins";
-      }
-
-      canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      input[type="file"] {
-        display: none;
-      }
-      .btn-grad {
-        background-image: linear-gradient(
-          to right,
-          #1fa2ff 0%,
-          #12d8fa 51%,
-          #1fa2ff 100%
-        );
-      }
-      .btn-grad {
-        margin: 10px;
-        padding: 15px 45px;
-        text-align: center;
-        text-transform: uppercase;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: white;
-        box-shadow: 0 0 20px #eee;
-        border-radius: 10px;
-        display: block;
-      }
-
-      .btn-grad:hover {
-        background-position: right center; /* change the direction of the change here */
-        color: #fff;
-        text-decoration: none;
-      }
-    </style>
   </head>
   <body>
-    <!-- <input class="btn-grad" type="file" id="imageUpload" /> -->
     <label for="imageUpload" class="btn-grad">
       <i class="fa fa-cloud-upload"></i> Upload Image
     </label>
     <input id="imageUpload" type="file" />
     <small id="status">Loading Please wait....</small>
+
     <canvas class="background"></canvas>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js
     "></script>
     <script>
