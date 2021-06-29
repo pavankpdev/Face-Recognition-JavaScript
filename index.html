@@ -19,6 +19,17 @@
     />
     <title>Face Recognition</title>
     <style>
+      .background {
+        position: absolute;
+
+        display: block;
+
+        top: 0;
+
+        left: 0;
+
+        z-index: 0;
+      }
       body {
         margin: 0;
         padding: 0;
@@ -74,5 +85,16 @@
     </label>
     <input id="imageUpload" type="file" />
     <small id="status">Loading Please wait....</small>
+    <canvas class="background"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js
+    "></script>
+    <script>
+      window.onload = function () {
+        Particles.init({
+          selector: ".background",
+          maxParticles: 300,
+        });
+      };
+    </script>
   </body>
 </html>
